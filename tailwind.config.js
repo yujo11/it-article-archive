@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -7,7 +8,9 @@ module.exports = {
     fontFamily: {
       jua: ['Jua', ...defaultTheme.fontFamily.serif],
     },
-    extend: {},
+    extend: {
+      colors,
+    },
   },
   variants: {
     extend: {},
