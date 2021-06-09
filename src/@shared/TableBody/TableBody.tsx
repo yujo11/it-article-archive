@@ -1,13 +1,13 @@
 import React from 'react';
 import { TableBodyItem } from '~/types';
-import Chip from './Chip';
+import Chip from '../Chip/Chip';
 
-interface Props {
+export interface TableBodyProps {
   items: TableBodyItem[];
   className?: string;
 }
 
-const TableBody = ({ items, className = '' }: Props): JSX.Element => {
+const TableBody = ({ items, className = '' }: TableBodyProps): JSX.Element => {
   return (
     <tbody className={`${className}`}>
       {items.map((item, index) => (
@@ -18,7 +18,7 @@ const TableBody = ({ items, className = '' }: Props): JSX.Element => {
           <td className="px-2 py-1">{item.date}</td>
           {item.tags.map((tag, index) => (
             <td key={index} className="flex px-2 py-1">
-              <Chip text={tag} />
+              <Chip text={tag} bgColor="bg-green-300" />
             </td>
           ))}
         </tr>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface Props {
+export interface TableHeaderProps {
   items: string[];
   className?: string;
 }
 
-const TableHeader = ({ items, className = '' }: Props): JSX.Element => {
+const TableHeader = ({ items, className = '' }: TableHeaderProps): JSX.Element => {
   return (
     <thead className={`text-lg border-b border-gray-300 ${className}`}>
       <tr>

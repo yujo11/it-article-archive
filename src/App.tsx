@@ -1,6 +1,6 @@
 import React from 'react';
-import TableBody from './@shared/TableBody';
-import TableHeader from './@shared/TableHeader';
+import TableBody from './@shared/TableBody/TableBody';
+import TableHeader from './@shared/TableHeader/TableHeader';
 
 const tableHeaderItems = ['No', 'Title', 'Summary', 'Date', 'Tags'];
 
