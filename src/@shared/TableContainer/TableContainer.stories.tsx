@@ -1,7 +1,7 @@
-import React from 'react';
-import TableBody from './@shared/TableBody/TableBody';
-import TableContainer from './@shared/TableContainer/TableContainer';
-import TableHeader from './@shared/TableHeader/TableHeader';
+import React, { Children } from 'react';
+import TableBody from '../TableBody/TableBody';
+import TableHeader from '../TableHeader/TableHeader';
+import TableContainer from './TableContainer';
 
 const tableHeaderItems = ['No', 'Title', 'Summary', 'Date', 'Tags'];
 
@@ -36,19 +36,16 @@ const tableBodyItems = [
   },
 ];
 
-const App = (): JSX.Element => {
-  return (
-    <div className="p-10 min-h-screen bg-gray-50">
-      <header className="mb-6">
-        <h1 className="mb-1 text-3xl font-semibold">📚 it-article-archive</h1>
-        <span className="text-ms ml-1 font-light">읽은 기술 아티클을 아카이빙합니다.</span>
-      </header>
-      <TableContainer>
-        <TableHeader items={tableHeaderItems} />
-        <TableBody items={tableBodyItems} />
-      </TableContainer>
-    </div>
-  );
+export default {
+  title: 'shared/TableContainer',
+  component: TableContainer,
 };
 
-export default App;
+const Template = () => (
+  <TableContainer>
+    <TableHeader items={tableHeaderItems} />
+    <TableBody items={tableBodyItems} />
+  </TableContainer>
+);
+
+export const Default = Template.bind({});
